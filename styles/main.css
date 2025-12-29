@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #0a0a12;
+    --text-color: #e0e0e0;
+    --accent-color: #64ffda;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-family: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.control-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.control-panel:hover {
+    box-shadow: 0 8px 32px 0 rgba(100, 255, 218, 0.1);
+    border-color: rgba(100, 255, 218, 0.2);
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+input[type="range"] {
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#gravity-value {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 500;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn.primary {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+.btn.primary:hover {
+    background: #4cd6b3;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+}
+
+.btn.secondary:hover {
+    border-color: #ff5555;
+    color: #ff5555;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 10px;
+}
